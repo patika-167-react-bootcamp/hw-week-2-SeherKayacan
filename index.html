@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>DOM</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+  </head>
+  <style>
+  .names {
+    background-color: white;
+    width: 350px;
+    height: 500px;
+    margin-top: 50px;
+    margin-left: 21%;
+    box-shadow: #E6E6FA;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 5px 10px 18px #9c9b9b;
+    
+  }
+  .names2{
+    background-color: white;
+    width:650px;
+    height: 500px;
+    margin-left:25px;
+    margin-top: 50px;
+    border-radius:8px;
+    padding: 25px;
+    box-shadow: 5px 10px 18px #888888;
+  
+  
+ 
+  }
+  h5{
+     
+   
+     background-color: #e3f2fd;
+     font-family: ' Verdana, sans-serif';
+     font-size: medium;
+     font-weight: bolder
+     padding
+
+  }
+
+</style>
+<body>
+  <div class="container">
+    <div class="row">
+        <div clas="col-4">
+        <div class="names">
+          <div class="form-group">
+             <div class="card">
+       <input type="text" id="UserName" placeholder="Yeni kişi adı"  height="20px" class="form-control form-control-sm"><br>
+       <input type="text" id="Userbalance" placeholder="Para Miktarı" class="form-control form-control-sm"/><br>
+       <button onclick="javascript:NewUserAdd()" style="background-color:#9ef7a5;border: #E6E6FA;border-radius: 4px;">Ekle</button>
+      </div>
+          </div>
+
+       <hr>
+       <div class="row" style="background-color: #e3f2fd;margin:0 2px 0 0;font-size:14px;font-weight: bold;text-align: left;">
+           <div class="col-6">ADI SOYADI</div>
+        <div class="col-4">BAKİYE</div>
+        <div class="col-2" style="padding-right:5px;">İŞLEM</div>
+       </div>
+       <ul id="users" class="list-group list-group-flush">
+       </ul>
+    </div>
+    </div>
+      <div class="col-1" ></div>
+      <div class="col-7">
+           <div class="names2">
+                 <div class="row">
+                     <div class="col-4" >
+                         <select id="sendername" name="sendername" class="form-control form-control-sm"  >
+                             <option  value="" disabled selected hidden >Gönderici Adı Seçiniz</option>
+                         </select>
+                      </div>
+                   <div class="col-4">
+                           <select id="r_name" name="r_name" class="form-control form-control-sm"  >
+                           <option  value="" disabled selected hidden >Alıcının  Adını Seçiniz</option>
+                          </select>
+                     </div>
+             <div class="col-2">
+                 <input type="text" id="money" placeholder="Tutar"  class="form-control form-control-sm"  /></div>
+             <div class="col-2">
+                  <button onclick="javascript:submit()" style="background-color:#9ef7a5;border: #E6E6FA;border-radius: 4px;padding: 6px 12px 6px 12px">Gönder</button>
+             </div>
+          </div>
+             <hr>
+             <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+               <a class="navbar-brand" style="font-size: 16px;font-weight: bold;">TRANSFER BİLGİSİ</a>
+               <form class="form-inline">
+                <select id="filter" class="form-control mr-sm-2 form-control form-control-sm" >
+                   <option>filtreleme seçeneğini seçiniz</option>
+                </select>
+              </form>
+             </nav>
+             <br>
+  
+            
+             <ul id="info" class="list-group list-group-flush">
+
+             </ul>
+            </div> 
+            </div>
+         </div>
+       </div>
+   <script src="app.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+  </body>
